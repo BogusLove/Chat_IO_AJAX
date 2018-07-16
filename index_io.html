@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Chat</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="/style.css" />    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="auth">
+            <div class="login">
+                <div class="login-triangle"></div>  
+                <h2 class="login-header">Log in to Chat</h2>
+                <div class="login-container">
+                    <p><input type="text" id="name" placeholder="Name"></p>
+                    <p><input type="text" id="nickname" placeholder="Nickname"></p>
+                    <p><input type="button" id="submitAuth" value="Log in"></p>
+                </div>
+            </div>
+        </div>
+        <div id="chat">
+            <div class="container clearfix" >    
+                <div class="people-list" id="people-list">      
+                    <div id="user">                        
+                    </div>
+                    <ul id="peopleList"></ul>
+                </div>                
+                <div class="chat">
+                    <div class="chat-header clearfix">        
+                        <div class="chat-about">
+                            <div class="chat-with">Chat</div>
+                        </div>
+                    </div>
+                    <div class="chat-history" id="chat_history">                        
+                        <ul id="messageList"></ul>                                                 
+                    </div>                    
+                    <div class="chat-message clearfix">
+                        <button type="button" id="down"><i class="fas fa-arrow-down"></i></button>   
+                        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                        <input type="button" id="sendButton" value="Send">
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script_io.js"></script>
+</html>
